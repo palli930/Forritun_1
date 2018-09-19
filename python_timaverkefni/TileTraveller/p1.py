@@ -4,7 +4,7 @@ x = 1
 y = 1
 
 if x == 1 and y == 1:
-    print("You can travel (N)orth.")
+    print("You can travel: (N)orth.")
 
 while x == 1 and y == 1:
     move = input("Direction: ")
