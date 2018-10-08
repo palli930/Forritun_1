@@ -9,9 +9,9 @@ def get_lines(filename):
             lines.append(i.replace("%","").split(','))
     except:
         lines = ""
+        print("Cannot find file "+filename)
         print("{:<33}{:<33}{:<21}".format("Indicator","Min","Max"))
         print("".center(87,"-"))
-        print("Cannot find file "+filename)
         quit()
     return lines
 
@@ -73,7 +73,7 @@ min_ao_f,ao_min,max_ao_f,ao_max = fylki_max_min(ao,linur)
 print("{:<33}{:<33}{:<21}".format("Indicator","Min","Max"))
 print("".center(87,"-"))
 print("{:<33}{:<21}{:6}{:>6}{:<15}{:>6}".format(hddr[0]+":",min_hddr_f,hddr_min,"",max_hddr_f,hddr_max))
-print("{:<33}{:<21}{:6}{:>6}{:<15}{:>6}".format(mvdr[0]+":",min_mvdr_f,hddr_min,"",max_mvdr_f,mvdr_max))
+print("{:<33}{:<21}{:6}{:>6}{:<15}{:>6}".format(mvdr[0]+":",min_mvdr_f,mvdr_min,"",max_mvdr_f,mvdr_max))
 print("{:<33}{:<21}{:6}{:>6}{:<15}{:>6}".format(tbr[0]+":",min_tbr_f,tbr_min,"",max_tbr_f,tbr_max))
 print("{:<33}{:<21}{:6}{:>6}{:<15}{:>6}".format(As[0]+":",min_As_f,As_min,"",max_As_f,As_max))
 print("{:<33}{:<21}{:6}{:>6}{:<15}{:>6}".format(ao[0]+":",min_ao_f,ao_min,"",max_ao_f,ao_max))
